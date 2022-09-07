@@ -1,0 +1,213 @@
+:root{
+    --c-hachelinggreen: #58a38b;
+    --c-slategray: #36383f;
+    --c-gray: #999;
+    --c-default: #000;
+    --c-active: rgb(212, 116, 60);
+
+    --ff-code: "Courier Prime";
+    --ff-default: "cairo";
+    --ff-logo: "tajawal";
+}
+
+*{
+    border: 1px solid black;
+}
+
+body{
+    font-family: var(--ff-default);
+}
+
+/* -----------------------------------------------------------------------------------------------------------------------------------------------
+                                           HEADER 
+-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+header{
+    background-color: #36383f;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header p.logoText{
+    font-family: var(--ff-default);
+    font-weight: 300;
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+    min-width: 3em;
+    flex-shrink: 1.5;
+    margin: 1em;
+
+    /* margin: 1em auto 0.7em; */
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------
+                                                                NAVIGATION SECION
+-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+header nav{
+    margin-right: 1em;
+    display: inline-flex;
+}
+
+header nav a{
+    text-decoration: none;
+    transition-duration: 0.35s;
+    font-weight: 600;
+    padding: 0.5rem;
+    text-align: center;
+    color: var(--c-hachelinggreen);
+    opacity: 60%;
+}
+
+header nav a:active{
+    color: var(--c-active);
+    transition-duration: 0.1s;
+}
+
+header nav a:hover{
+    transition-duration: 0.35s;
+    /* transform: translateY(-10px); */
+    margin-top: -10px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--c-hachelinggreen);
+    opacity: 100%;
+}
+
+/* ........................................................
+    JUMBOTRON THINGS
+............................................................*/
+
+.jumbotron{
+    background-color: var(--c-hachelinggreen);
+    min-height: 10rem;
+    min-width: 4rem;
+
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.jumbotron img{
+    /* max-width: 25%; */
+    height: clamp(200px, 50vw, 450px);
+}
+
+.jumbotron h1{
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0 1rem;
+    padding: 0;
+    line-height: 1.4;
+}
+
+.jumbotron p{
+    font-weight: 600;
+    margin: 0 1rem;
+    line-height: 1.2;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------
+            PORTFOLIO EGG NAVIGATION
+-----------------------------------------------------------------------------------------------------------------------------------------------*/
+    .portfolio-egg-nav{
+        background-color: var(--c-slategray);
+        width: 100%;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: flex-start;
+        min-height: 15rem;
+
+        margin: 2rem 0;
+        padding: 2rem 0;
+    }
+
+    .portfolio-egg-nav a.egg-link{
+        color: var(--c-hachelinggreen);
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 1.5rem;
+    }
+
+    .portfolio-egg-nav div.egg-pair-container{
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+        /* border: 1px red solid; */
+    }
+
+    .portfolio-egg-nav .egg-link{
+        text-align: center;
+    }
+
+    .portfolio-egg-nav div.egg-img-standin{
+        background-color: var(--c-hachelinggreen);
+        border-radius: 50%;
+        opacity: 85%;
+        
+        min-width: 150px;
+        aspect-ratio: 3/4;
+        
+        margin: 0.5rem;
+
+        transition-duration: 0.5s;
+    }
+
+    .portfolio-egg-nav div.egg-img-standin:hover{
+        transform: scale(110%) translateY(-15px);        
+        transition-duration: 0.75s;
+        opacity: 100%;
+    }
+
+    /* .portfolio-egg-nav #test-egg{
+        background-color: var(--c-hachelinggreen);
+        opacity: 85%;
+        transition-duration: 1s;
+    }
+
+    .portfolio-egg-nav #test-egg:hover{
+        transform: scale(110%) translateY(-10px);        
+        transition-duration: 3s;
+        opacity: 100%;
+    } */
+
+    /* .portfolio-egg-nav div.inactive{
+        opacity: 50%;
+        cursor: default;
+        pointer-events: none;
+    } */
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------
+            MEDIA QUERIES
+-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media (min-width: 900px){
+    header{
+        justify-content: space-between;
+        flex-flow: row wrap;
+        align-items: center;
+    }
+
+    header p{
+        margin: 1em 0.7em 1em 1em;
+        text-align: left;
+    }
+    
+    .jumbotron{
+        justify-content: space-between;
+    }
+}
