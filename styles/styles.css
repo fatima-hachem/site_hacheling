@@ -15,7 +15,12 @@
 }
 
 body{
-    font-family: var(--ff-default);
+    font-family: var(--ff-default), Arial, Helvetica, sans-serif;
+}
+
+h2{
+    font-size: 3rem;
+    margin: 0.5em;
 }
 
 /* -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -153,12 +158,12 @@ header nav a:hover{
         text-align: center;
     }
 
-    .portfolio-egg-nav div.egg-img-standin{
+    .portfolio-egg-nav .egg-img-standin{
         background-color: var(--c-hachelinggreen);
         border-radius: 50%;
         opacity: 85%;
         
-        min-width: 150px;
+        width: 150px;
         aspect-ratio: 3/4;
         
         margin: 0.5rem;
@@ -166,31 +171,83 @@ header nav a:hover{
         transition-duration: 0.5s;
     }
 
-    .portfolio-egg-nav div.egg-img-standin:hover{
+    .portfolio-egg-nav .egg-img-standin:hover{
         transform: scale(110%) translateY(-15px);        
         transition-duration: 0.75s;
         opacity: 100%;
     }
 
-    /* .portfolio-egg-nav #test-egg{
-        background-color: var(--c-hachelinggreen);
-        opacity: 85%;
-        transition-duration: 1s;
+    .portfolio-egg-nav a.egg-link p{
+        max-width: 150px;
+        text-align: center;
     }
 
-    .portfolio-egg-nav #test-egg:hover{
-        transform: scale(110%) translateY(-10px);        
-        transition-duration: 3s;
-        opacity: 100%;
-    } */
 
-    /* .portfolio-egg-nav div.inactive{
+    .portfolio-egg-nav .inactive{
         opacity: 50%;
         cursor: default;
         pointer-events: none;
-    } */
+    }
 
+/*-----------------------------------------------------------------------------------------------------------------------------------------------
+            ABOUT SECTION
+-----------------------------------------------------------------------------------------------------------------------------------------------*/
 
+    div.about-section{
+        background-color: #ddd;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+    
+    div.block{
+        display: inline-flex;
+        flex-flow: column wrap;
+        margin: 2.5%;
+        max-width: 45%;
+    }
+
+    div.card{
+        margin: 2.5% 0;
+    }
+
+    div.block p.block-title{
+        color: var(--c-hachelinggreen);
+
+        font-size: 3em;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 0.2em;
+    }
+
+    div.block p.block-subtitle{
+        font-weight: 300;
+        font-size: 1.7em;
+    }
+
+    div.card p.card-title{
+        font-weight: 600;
+        font-size: 1.75em;
+        text-transform: uppercase;
+
+        margin-bottom: 0.3em;
+        border-bottom: 2px solid var(--c-slategray);
+    }
+
+    div.card p.card-subtitle{
+        font-size: 1.25em;
+        font-weight: 600;
+    }
+
+    div.card p{
+        margin-top: 1em;
+    }
+
+    div.card span.inline-title{
+        color: var(--c-hachelinggreen);
+        font-weight: 700;
+        font-size: 1.1em;
+    }
 /*-----------------------------------------------------------------------------------------------------------------------------------------------
             MEDIA QUERIES
 -----------------------------------------------------------------------------------------------------------------------------------------------*/
